@@ -4,17 +4,13 @@
     {
       "src": "web/",
       "use": "@vercel/static"
-    },
-    {
-      "src": "pubspec.yaml",
-      "use": "@vercel/flutter"
     }
   ],
   "routes": [
     { "handle": "filesystem" },
     {
       "src": "/(.*)",
-      "dest": "pubspec.yaml"
+      "dest": "web/$1"
     }
   ]
 }
